@@ -6,4 +6,5 @@
             :mass       5.97219e24 ; kg
             :aphelion   152098232  ; km, farthest from sun
             :perihelion 147098290  ; km, closest to sun
+            :type       :Planet    ;entity type
             })
