@@ -45,11 +45,11 @@
 
 (defn *$ [m n]
   (->Money (* n
-              (:amount m)
-              (:currency m))))
+              (:amount m))
+           (:currency m)))
 
 
 (defn make-money
   ([] (make-money 0))
   ([amount] (make-money amount :usd))
-  ([amount currency] (->Money amount (currency currencies))))
+  ([amount currency] (->Money amount currency)))
