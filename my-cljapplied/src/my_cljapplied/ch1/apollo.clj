@@ -30,3 +30,17 @@
                 :lm-name "Eagle"
                 :orbits 30
                 :evas 1))
+
+
+(defrecord Planet [name moons volume mass aphelion perihelion
+                   orbital-eccentricity])
+
+
+(defn euclidean-norm [ecc-vector] ,,,)
+
+
+(defn make-planet
+  "Make a planet from field values and an eccentricity vector"
+  [name moons volume mass aphelion perihelion ecc-vector]
+  (->Planet name moons volume mass aphelion perihelion
+            (euclidean-norm ecc-vector)))
