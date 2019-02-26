@@ -8,3 +8,12 @@
             :perihelion 147098290  ; km, closest to sun
             :type       :Planet    ;entity type
             })
+
+
+(defrecord Planet [name
+                   moons
+                   volume     ; km^3
+                   mass       ; kg
+                   aphelion   ; km, farthest from sun
+                   perihelion ; km, closest to sun
+                   ])
