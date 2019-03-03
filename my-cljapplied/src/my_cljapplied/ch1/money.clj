@@ -59,3 +59,6 @@
   "$0.00 usd"
   []
   (->Money 0 :usd))
+
+
+(def zero-dollers (->Money 0 :usd))
