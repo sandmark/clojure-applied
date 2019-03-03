@@ -14,3 +14,13 @@
     [fname ; first name
      lname ; last name
      ])
+
+
+(def toast
+  (->Recipe
+   "Toast"
+   (->Person "Alex" "Miller")  ; nested
+   "Crispy bread"
+   ["Slice of bread"]
+   ["Toast bread in toaster"]
+   1))
