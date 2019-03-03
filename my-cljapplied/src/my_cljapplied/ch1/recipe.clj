@@ -24,3 +24,16 @@
    ["Slice of bread"]
    ["Toast bread in toaster"]
    1))
+
+
+(def people
+  {"p1" (->Person "Alex" "Miller")})
+
+
+(def recipes
+  {"r1" (->Recipe "Toast"
+                  "p1"    ; Person id
+                  "Crispy bread"
+                  ["Slice of bread"]
+                  ["Toast bread in toaster"]
+                  1)})
