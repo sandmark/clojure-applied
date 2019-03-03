@@ -8,3 +8,9 @@
      steps       ; sequence of string
      servings    ; number of servings
      ])
+
+
+(defrecord Person
+    [fname ; first name
+     lname ; last name
+     ])
