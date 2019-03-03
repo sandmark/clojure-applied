@@ -53,3 +53,9 @@
   ([] (make-money 0))
   ([amount] (make-money amount :usd))
   ([amount currency] (->Money amount currency)))
+
+
+(defn new-money
+  "$0.00 usd"
+  []
+  (->Money 0 :usd))
