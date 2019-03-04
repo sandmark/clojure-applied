@@ -1,18 +1,19 @@
 (ns my-cljapplied.ch1.validate
-  (:require [schema.core :as s]))
+  ;; (:require [schema.core :as s])
+  )
 
-(s/defrecord Recipe
-    [name :- s/Str
-     description :- s/Str
-     ingredients :- [Ingredient]
-     steps :- [s/Str]
-     servings :- s/Int])
+(defrecord Recipe
+    [name
+     description
+     ingredients
+     steps
+     servings ])
 
 
-(s/defrecord Ingredient
-    [name :- s/Str
-     quantity :- s/Int
-     unit :- s/Keyword])
+(defrecord Ingredient
+    [name
+     quantity
+     unit ])
 
 
 (def spaghetti-tacos
