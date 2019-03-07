@@ -13,3 +13,12 @@
 
 (defn cook-order [orders]
   (cook (first orders)) (rest orders))
+
+
+;;; In case of List
+;; リストの末尾に要素を追加するためには、コレクション全体を
+;; 走査しなければならず、ベクター同様こちらも非効率的
+(defn new-orders '())
+
+(defn add-order [orders order]
+  (concat orders (list order)))
