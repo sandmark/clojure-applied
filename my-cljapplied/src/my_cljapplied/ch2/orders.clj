@@ -22,3 +22,19 @@
 
 (defn add-order [orders order]
   (concat orders (list order)))
+
+
+;;; In case of Queue
+;; 必要なのはキュー。得意な操作を図にするとこんな感じ。
+;; List     ←→□□□□□□□□
+;; Vector       □□□□□□□□←→
+;; Queue      ←□□□□□□□□←
+(def new-orders
+  clojure.lang.PersistentQueue/EMPTY)
+
+(defn add-order [orders order]
+  (conj orders order))
+
+(defn cook-order [orders]
+  (cook (peek orders))
+  (pop orders))
